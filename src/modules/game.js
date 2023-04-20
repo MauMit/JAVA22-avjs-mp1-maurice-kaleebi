@@ -27,7 +27,6 @@ let winnerOfRoundResultH4 = h4[0]; // Visar resultat av ronden på skärmen, om 
 let playerScore = 0; // poäng för spelaren när de väljer rätt
 let computerScore = 0; // poäng för datorn när de väljer rätt
 
-// let random = Math.floor(Math.random() * arr.length);
 let random = 0;
 let computerGuess = `${arr[random]}`;
 
