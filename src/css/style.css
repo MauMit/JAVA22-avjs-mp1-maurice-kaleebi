@@ -39,7 +39,7 @@ h4 {
 
 h5 {
   margin-left: 600px;
-  margin-right: 600px
+  margin-right: 600px;
 }
 form {
   position: fixed;
@@ -55,9 +55,7 @@ form {
   text-shadow: 2px 2px blue;
 }
 
-
-li{
+li {
   font-size: 30px;
   color: red;
-  
 }
