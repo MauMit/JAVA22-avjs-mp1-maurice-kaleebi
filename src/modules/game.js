@@ -38,7 +38,8 @@ function gameOver() { // funktion körs när datorn vinner
         getFirebase(userName, playerScore)
         winnerH1.innerText = 'Computer Won the game';
         endGameResultH5.innerText = 'Game over, Select Rock, Paper or Scissors to play again OR hit refresh for new player';
-        endGameResultH5.style.color = 'purple';
+        endGameResultH5.style.color = 'white';
+        endGameResultH5.style.background = 'black'
         winnerOfRoundResultH4.innerText = '';
         h3[0].innerText = `Player Points: ${playerScore}`;
         computerScore = 0;
@@ -52,7 +53,6 @@ function playerWins() { // function körs när spelaren vinner ett poäng
     computerChoice.innerText = `Computer selected ${computerGuess}`;
     h3[0].innerText = `Player Points: ${playerScore}`;
     h3[0].style.color = 'blue';
-    console.log(computerGuess)
 }
 
 
@@ -80,8 +80,7 @@ export function playGame() { // lägger spelet i en function och kallar på den 
         playerChoiceH2.innerText = 'You Selected Rock';
         winnerH1.innerText = '';
         endGameResultH5.innerText = '';
-        console.log(computerGuess)
-   
+
         if (computerGuess == rock) {
 
             winnerOfRoundResultH4.innerText = 'Tie';
@@ -104,17 +103,16 @@ export function playGame() { // lägger spelet i en function och kallar på den 
     });
 
     paperButton.addEventListener('click', () => {
-       
-         random = Math.floor(Math.random() * arr.length);
-         computerGuess = `${arr[random]}`;
+
+        random = Math.floor(Math.random() * arr.length);
+        computerGuess = `${arr[random]}`;
         playerChoiceH2.innerText = 'You Selected Paper';
         winnerH1.innerText = '';
         endGameResultH5.innerText = '';
-        console.log(computerGuess)
 
         if (computerGuess == rock) {
 
-           playerWins();
+            playerWins();
 
         } else if (computerGuess == paper) {
 
@@ -139,8 +137,7 @@ export function playGame() { // lägger spelet i en function och kallar på den 
         playerChoiceH2.innerText = 'You Selected Scissors';
         random = Math.floor(Math.random() * arr.length);
         computerGuess = `${arr[random]}`;
-        console.log(computerGuess)
-    
+
         if (computerGuess == rock) {
             computerScore++;
             computerChoice.innerText = `Computer selected ${computerGuess}`;
