@@ -38,7 +38,7 @@ function gameOver() { // funktion körs när datorn vinner
         getFirebase(userName, playerScore)
         winnerH1.innerText = 'Computer Won the game';
         endGameResultH5.innerText = 'Game over, Select Rock, Paper or Scissors to play again OR hit refresh for new player';
-        endGameResultH5.style.color = 'white';
+        endGameResultH5.style.color = 'red';
         endGameResultH5.style.background = 'black'
         winnerOfRoundResultH4.innerText = '';
         h3[0].innerText = `Player Points: ${playerScore}`;
